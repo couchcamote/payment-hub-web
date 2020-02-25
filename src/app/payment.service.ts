@@ -18,7 +18,7 @@ export class PaymentService {
   }
 
   pay(amount:number) : Observable<string> {
-    return this.http.get<string>(`${this.host}/pay/${amount}`);
+    return this.http.get<string>(`${this.host}/pay/${amount.toFixed(2)}`);
   }
 
   reload(amount:number) :  Observable<string> {

@@ -16,4 +16,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponent = [BalanceComponent,PaymentComponent, ReloadComponent]
+export const routingComponents = [BalanceComponent, PaymentComponent, ReloadComponent]
