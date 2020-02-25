@@ -1,0 +1,12 @@
+<p class="h1">Pay using card </p>
+<div *ngIf="show" class="alert alert-light" role="alert">
+    {{message}}
+  </div>
+
+<form name="form" (ngSubmit)="onSubmit()">
+    <label>Amount: </label>
+    <input  class="form-control form-control-lg"  type="number" name="amount" id="amount" value="Amount"  [(ngModel)]="amount"  />
+  <br/>
+    <button class="btn btn-primary" type="submit">Confirm</button>
+ 
+</form>

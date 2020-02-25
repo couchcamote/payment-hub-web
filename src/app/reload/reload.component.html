@@ -1,0 +1,19 @@
+<p class="h1">Reload Card </p>
+<div *ngIf="show" class="alert alert-light" role="alert">
+    {{message}}
+  </div>
+
+<form name="form" (ngSubmit)="onSubmit()">
+    <label>Amount: </label>
+    <select class="form-control form-control-lg"  name="amount" id="amount"  [(ngModel)]="amount" >
+        <option value="20.00">P20</option>
+        <option value="50.00">P50</option>
+        <option value="100.00">P100</option>
+        <option value="200.00">P200</option>
+        <option value="500.00">P500</option>
+        <option value="1000.00">P1000</option>
+    </select>
+  <br/>
+    <button class="btn btn-primary" type="submit">Confirm</button>
+ 
+</form>
