@@ -8,6 +8,7 @@ import { PaymentComponent } from './payment/payment.component';
 import { FormsModule} from '@angular/forms';
 import { PaymentService} from './payment.service';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-    HttpClientModule    
+    HttpClientModule,
+    RouterModule    
   ],
   providers: [PaymentService],
   bootstrap: [AppComponent]

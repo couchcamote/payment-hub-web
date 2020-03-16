@@ -5,13 +5,13 @@
         <div class="card-header tab-card-header">
           <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
             <li class="nav-item">
-                <a class="nav-link" id="one-tab" data-toggle="tab" href="balance" role="tab" aria-controls="One" aria-selected="true">Balance</a>
+                <a class="nav-link" [routerLink]="['/balance']" id="one-tab" data-toggle="tab" href="balance" role="tab" aria-controls="One" aria-selected="true">Balance</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="two-tab" data-toggle="tab" href="payment" role="tab" aria-controls="Two" aria-selected="false">Payment</a>
+                <a class="nav-link" [routerLink]="['/payment']" id="two-tab" data-toggle="tab" href="payment" role="tab" aria-controls="Two" aria-selected="false">Payment</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="three-tab" data-toggle="tab" href="reload" role="tab" aria-controls="Three" aria-selected="false">Reload</a>
+                <a class="nav-link" [routerLink]="['/reload']" id="three-t ab" data-toggle="tab" href="reload" role="tab" aria-controls="Three" aria-selected="false">Reload</a>
             </li>
           </ul>
         </div>

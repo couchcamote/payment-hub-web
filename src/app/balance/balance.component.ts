@@ -11,7 +11,7 @@ export class BalanceComponent implements OnInit {
   message = "";
   show:boolean = false;
 
-  balance:string  = '0'
+  balance:string  = ''
   amount = 0
   constructor(private paymentService:PaymentService) { }
   
@@ -29,6 +29,8 @@ export class BalanceComponent implements OnInit {
     .subscribe((resp) => {
       console.log("RESPONSE" + resp);
         this.balance = resp;
+        this.message=""
+        this.show=false
     }, error => {
       console.error('error handled in page', error);
       this.message = error.error;

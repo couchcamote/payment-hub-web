@@ -8,7 +8,8 @@ import { PaymentComponent } from './payment/payment.component';
 const routes: Routes = [
   {path : 'balance', component:BalanceComponent},
   {path : 'payment', component:PaymentComponent},
-  {path : 'reload', component:ReloadComponent}
+  {path : 'reload', component:ReloadComponent},
+  { path: '', redirectTo: '/balance', pathMatch: 'full' },
 ];
 
 @NgModule({

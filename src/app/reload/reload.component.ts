@@ -21,6 +21,13 @@ export class ReloadComponent implements OnInit {
 
   onSubmit() {
     console.log("FORM SUBMIT");
+
+    if(this.amount <= 0){
+      this.message = "Invalid amount. "
+      this.show = true
+      return
+    }
+
     this.message="Tap your card to the NFC reader"
     this.show=true
     this.balance=""
@@ -28,7 +35,8 @@ export class ReloadComponent implements OnInit {
     .subscribe((resp) => {
       console.log("RESPONSE" + resp);
         this.balance = resp;
-        this.message=`Your new balance is ${this.balance} `
+        this.message=`Reloading succesful. Your new balance is ${this.balance} `
+        this.show = true;
     }, error => {
       console.error('error handled in page', error);
       this.message = error.error;
