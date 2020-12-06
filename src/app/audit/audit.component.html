@@ -1,0 +1,64 @@
+<form name="form" (ngSubmit)="onSubmit()">
+    <p class="h1">Latest Transactions </p>
+    <div *ngIf="show" class="alert alert-light" role="alert">
+        {{message}}
+    </div>
+    <div >
+        <button class="btn btn-primary" type="submit">Retrieve</button>
+    </div>
+   <br>
+   
+    <!-- <div *ngFor="let row of data; let i = index; ">
+        <div *ngFor="let col of row; ">
+            {{col}} | 
+        </div>
+        <br>
+    </div> -->
+
+<div class="mat-elevation-z8">
+    <table mat-table >
+    <thead >
+
+        <tr mat-header-row>
+
+            <th mat-header-cell >Type </th>
+            <th mat-header-cell>Card ID</th>
+            <th mat-header-cell>Balance </th>
+            <th mat-header-cell>Location </th>
+            <th mat-header-cell>Timestamp </th>
+
+        </tr>
+
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let row2 of data; let j = index; " >
+
+            <tr mat-row>
+
+                <td mat-cell >{{row2[1]}} </td>
+                <td mat-cell >{{row2[3]}} </td>
+                <td mat-cell >{{row2[10]}} </td>
+                <td mat-cell >
+                    <span>{{row2[8]}}</span> <br>
+                    <span> {{row2[6]}}, {{row2[7]}} </span> 
+                </td>
+                <td mat-cell >{{row2[9]}} </td>
+
+            </tr>
+
+        </ng-container>
+        </tbody>
+    </table>
+
+  </div> 
+
+
+  
+
+<ng-container *ngFor="let entry of data; let j = index; " >
+
+</ng-container>   
+ 
+   
+ 
+</form>  

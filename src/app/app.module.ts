@@ -9,12 +9,15 @@ import { FormsModule} from '@angular/forms';
 import { PaymentService} from './payment.service';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { AuditComponent } from './audit/audit.component';
+import { AuditService } from './audit.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     PaymentComponent,
-    routingComponents
+    routingComponents,
+    AuditComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,7 @@ import { RouterModule } from '@angular/router';
     HttpClientModule,
     RouterModule    
   ],
-  providers: [PaymentService],
+  providers: [PaymentService, AuditService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
