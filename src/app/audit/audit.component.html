@@ -7,49 +7,33 @@
         <button class="btn btn-primary" type="submit">Retrieve</button>
     </div>
    <br>
-   
-    <!-- <div *ngFor="let row of data; let i = index; ">
-        <div *ngFor="let col of row; ">
-            {{col}} | 
-        </div>
-        <br>
-    </div> -->
-
-<div class="mat-elevation-z8">
-    <table mat-table >
+<div>
+    <table >
     <thead >
-
-        <tr mat-header-row>
-
-            <th mat-header-cell >Type </th>
-            <th mat-header-cell>Card ID</th>
-            <th mat-header-cell>Balance </th>
-            <th mat-header-cell>Location </th>
-            <th mat-header-cell>Timestamp </th>
-
+        <tr>
+            <th>Type </th>
+            <th>Card ID</th>
+            <th>Balance </th>
+            <th>Latest Location </th>
+            <th>Timestamp </th>
         </tr>
-
     </thead>
     <tbody>
-        <ng-container *ngFor="let row2 of data; let j = index; " >
-
-            <tr mat-row>
-
-                <td mat-cell >{{row2[1]}} </td>
-                <td mat-cell >{{row2[3]}} </td>
-                <td mat-cell >{{row2[10]}} </td>
-                <td mat-cell >
+        <ng-container *ngFor="let
+         row2 of data; let j = index; " >
+            <tr>
+                <td>{{row2[1]}} </td>
+                <td>{{row2[3] | uppercase}} </td>
+                <td>{{row2[10]}} </td>
+                <td>
                     <span>{{row2[8]}}</span> <br>
-                    <span> {{row2[6]}}, {{row2[7]}} </span> 
+                    <span> {{row2[6] | number:'1.1-1'}}xxx, {{row2[7] | number:'1.1-1'}}xxx </span> 
                 </td>
-                <td mat-cell >{{row2[9]}} </td>
-
+                <td>{{row2[9]}} </td>
             </tr>
-
         </ng-container>
         </tbody>
     </table>
-
   </div> 
 
 
